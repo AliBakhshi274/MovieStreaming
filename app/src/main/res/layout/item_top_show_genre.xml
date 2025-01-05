@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="80dp"
+        android:layout_height="110dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/otherColor"
+        app:cardCornerRadius="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/movie_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="8dp"
+        app:cardBackgroundColor="@color/otherColor"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="-1dp">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_marginLeft="100dp">
+
+
+            <TextView
+                android:id="@+id/movie_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="monospace"
+                android:lines="1"
+                android:text="@string/movie_name"
+                android:textColor="@color/textColor"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/movie_director"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_name"
+                android:layout_marginTop="4dp"
+                android:fontFamily="monospace"
+                android:lines="1"
+                android:text="@string/director"
+                android:textColor="@color/textColor"
+                android:textSize="10sp" />
+
+
+            <TextView
+                android:id="@+id/movie_published"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_director"
+                android:layout_marginTop="4dp"
+                android:fontFamily="monospace"
+                android:lines="1"
+                android:text="@string/published_at"
+                android:textColor="@color/textColor"
+                android:textSize="10sp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_published"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_access_time_24" />
+
+                <TextView
+                    android:id="@+id/time_movie_imdb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="2h 35m"
+                    android:textColor="@color/textColor"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/movie_imdb_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_imdb_rate"
+                android:fontFamily="monospace"
+                android:padding="3dp"
+                android:text="IMDb:8.5/10"
+                android:textColor="@color/colorPrimary"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

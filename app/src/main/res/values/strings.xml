@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MovieStreaming</string>
+    <string name="name">name</string>
+    <string name="time">time</string>
+    <string name="published">published</string>
+    <string name="top_movie_imdb">Top Movie IMDb</string>
+    <string name="more">More</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="movie_2020">Movie 2020</string>
+    <string name="series">Series</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email_address">Email Address</string>
+    <string name="genre">Genre</string>
+    <string name="director">Director</string>
+    <string name="published_at">Published:</string>
+    <string name="popular_movie">Popular Movie</string>
+    <string name="test">test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test</string>
+    <string name="favorite">Favorite</string>
+    <string name="favorites">Favorites</string>
+    <string name="movie_streaming">Movie Streaming</string>
+    <string name="check">Check</string>
+    <string name="go_to_app">Go To App</string>
+    <string name="CurrentIP">192.168.1.105</string>
+</resources>

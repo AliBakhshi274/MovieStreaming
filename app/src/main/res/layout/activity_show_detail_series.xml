@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ShowDetailSeriesActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/detail_layout_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/detail_series_fab_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:backgroundTint="@color/colorAccent"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
+
+                    <ImageView
+                        android:id="@+id/detail_series_img_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/detail_img_download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/ic_baseline_get_app_24" />
+
+                    <ImageView
+                        android:id="@+id/detail_img_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/detail_img_download"
+                        app:srcCompat="@drawable/ic_baseline_comment_24" />
+
+                    <ImageView
+                        android:id="@+id/detail_series_img_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:id="@+id/detail_layout_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_layout_play"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/bg_detail"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/detail_series_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name"
+                        android:textColor="@color/textColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detail_series_director"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detail_series_name"
+                        android:layout_marginTop="15dp"
+                        android:text="Director: "
+                        android:textColor="@color/textColor"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/detail_episodes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detail_series_director"
+                        android:layout_marginTop="5dp"
+                        android:text="Episodes : 11"
+                        android:textColor="@color/textColor"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_baseline_folder_special_24" />
+
+                        <TextView
+                            android:id="@+id/detail_seasons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:text="4 Seasons"
+                            android:textColor="@color/textColor"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/series_imdb_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detail_episodes"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/bg_imdb_rate"
+                        android:fontFamily="monospace"
+                        android:padding="3dp"
+                        android:text="IMDb:8.5/10"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detail_series_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/series_imdb_rate"
+                        android:layout_marginTop="20dp"
+                        android:text="Description: "
+                        android:textColor="@color/textColor"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detail_series_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detail_series_description"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="@string/test"
+                        android:textColor="@color/textColor" />
+
+                    <TextView
+                        android:id="@+id/detail_series_season"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detail_series_text"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Seasons: "
+                        android:textColor="@color/textColor" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@id/detail_series_season"
+                        android:id="@+id/detail_series_season_recycler"/>
+
+
+                    <TextView
+                        android:id="@+id/detail_series_cast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detail_series_season_recycler"
+                        android:layout_marginTop="20dp"
+                        android:text="Cast: "
+                        android:textColor="@color/textColor"
+                        android:textStyle="bold" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/detail_series_cast_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detail_series_cast"
+                        android:layout_marginTop="8dp" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/detail_series_similar_movie_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_layout_description"
+                    android:layout_margin="8dp"
+                    android:text="Similar Series: "
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/detail_series_similar_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_series_similar_movie_txt"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

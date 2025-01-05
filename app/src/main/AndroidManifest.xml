@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.moviestreaming">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MovieStreaming">
+        <activity android:name=".CommentActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".BuyAccountActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="app" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".IntroActivity" />
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".VerifyPhoneActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".ShowSearchActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".ShowGenreActivity" />
+        <activity android:name=".EpisodeActivity" />
+        <activity android:name=".VideoPlayActivity" />
+        <activity android:name=".ShowDetailSeriesActivity" />
+        <activity android:name=".ShowDetailMovieActivity" />
+        <activity android:name=".SeriesActivity" />
+        <activity android:name=".TopMovieIMDbActivity" />
+        <activity android:name=".GenreActivity" />
+        <activity android:name=".HomeActivity" />
+    </application>
+
+</manifest>
